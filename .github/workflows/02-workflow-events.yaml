@@ -1,4 +1,4 @@
-name: 02 - workflow Events
+name: 02-workflow Events
 
 on: 
     push:
