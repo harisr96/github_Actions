@@ -1,7 +1,7 @@
                
 name: 03-workflow-runners
 
-on: push
+on: workflow_dispatch
 
 jobs:
   ubuntu-echo:
@@ -22,7 +22,7 @@ jobs:
         echo "runner OS: $RUNNER_OS"
 
   mac-echo:
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps: 
     - name: Show OS
       shell: bash
