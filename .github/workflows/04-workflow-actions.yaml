@@ -14,8 +14,10 @@ jobs:
         with:
             node-version: '20.x'
       - name: Install Dependencies
-        run : npm ci
-        working-directory: .github/workflows/react-app
+        run : |
+              ls -R
+              npm ci
+        working-directory: 04-using-actions/react-app
 
 
 
@@ -26,9 +28,13 @@ jobs:
 # mkdir folder
 # cd folder
 # npx create-react-app --template typescript react-app
-# npm run start
+# y
+# cd create-react-app
+# npm start
 
 # run: |
 # cd .github\workflows\react-app
 # npm ci
+
+
 
