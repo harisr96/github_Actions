@@ -1,0 +1,26 @@
+               
+name: 04-using-actions
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Printing Folders
+        run: ls
+ 
+
+
+
+# 0. checkout the code from the repo
+# 1. install dependencies of react application
+# 2. Execute automated tests
+# create react application
+# mkdir folder
+# cd folder
+# npx create-react-app --template typescript react-app
+# npm run start
+
