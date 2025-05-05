@@ -9,9 +9,13 @@ jobs:
     steps: 
       - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Printing Folders
-        run: ls -larth
- 
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+            node-version: '20.x'
+      - name: Install Dependencies
+        run : npm ci
+        working-directory: .github\workflows\react-app
 
 
 
@@ -23,4 +27,8 @@ jobs:
 # cd folder
 # npx create-react-app --template typescript react-app
 # npm run start
+
+# run: |
+# cd .github\workflows\react-app
+# npm ci
 
