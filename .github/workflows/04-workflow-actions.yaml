@@ -15,7 +15,7 @@ jobs:
             node-version: '20.x'
       - name: Install Dependencies
         run : npm ci
-        working-directory: .github\workflows\react-app
+        working-directory: .github/workflows/react-app
 
 
 
