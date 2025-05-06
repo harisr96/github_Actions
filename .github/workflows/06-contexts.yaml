@@ -3,6 +3,7 @@ name: 06-contexts.yaml
 
 on: 
     push:
+    workflow_dispatch:
 
 
 jobs:
