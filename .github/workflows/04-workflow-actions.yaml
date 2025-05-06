@@ -1,7 +1,7 @@
                
 name: 04-using-actions
 
-on: push
+on: workflow_dispatch
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     steps: 
       - name: Checkout Code
         uses: actions/checkout@v4
-        
+
       - name: Setup node
         uses: actions/setup-node@v4
         with:
