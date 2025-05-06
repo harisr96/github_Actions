@@ -27,6 +27,7 @@ jobs:
 # jobs: Defines a collection of jobs to be run
 # Job ID (custom name for the job)
 # runs-on: Specifies the type of runner (e.g., ubuntu, windows)
+# environment:prod when the environment is prod
 # defaults: Sets default values for all steps in the job (cd directory)
 # steps: A sequence of tasks to be run as part of the job
 # name: Human-readable name for the step
@@ -53,6 +54,7 @@ jobs:
 # env: Declares environment variables at the job level (available to all steps in the job)
 # env: Step-level environment variables (overrides job/workflow level)
 
+
 # if: ${{ inputs.debug }}  # conditional execution expression
 # shell: bash  # Overrides the default shell to use bash on Windows
 # uses: Calls a pre-built GitHub Action (here, to checkout repo code)
@@ -63,6 +65,29 @@ jobs:
  
 ##contexts
 # ${{ github.event_name}}
-# ${{ env.MY_OVERWRITTEN_VAR}}
-# ${{ vars.MY_VAR}}
+# ${{ env.MY_OVERWRITTEN_VAR}}   ## here the keyword env is used is refreed
+# ${{ vars.MY_VAR}}              ## setup in cloud variables and refferred
 # $MY_OVERWRITTEN_VAR
+
+
+## Create ORAGNIZATION Variables
+## ORG_VAR = organization value 1
+## OVERWRITTEN_VAR = = organization value 2
+
+## Create Repository Variables
+## REPOSITORY_VAR = repository value 1
+
+
+
+## Create environment staging
+## TARGET_VAR = staging
+
+## Create environment production
+## TARGET_VAR = production
+## OVERWRITTEN_VAR = = prod value
+
+#3 environment are valid fpor a repository only 
+
+#Repository Variables- visibility only to workflows within that specific repository
+#Organization Variables - Can be shared across multiple repositories within the organization.You must explicitly select which repositories can access the variable
+#Environment Variables - Specific environment like prod, dev, etc.
