@@ -57,6 +57,9 @@ jobs:
 # shell: bash  # Overrides the default shell to use bash on Windows
 # uses: Calls a pre-built GitHub Action (here, to checkout repo code)
 # with: Supplies input parameters to the action above (uses keyword)
+
+# having default values using OR condition
+# run-name: 07- using expressions DEBUG -  ${{ inputs.debug && 'ON' || 'OFF' }}
  
 ##contexts
 # ${{ github.event_name}}
