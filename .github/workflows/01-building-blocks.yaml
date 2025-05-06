@@ -53,6 +53,7 @@ jobs:
 # env: Declares environment variables at the job level (available to all steps in the job)
 # env: Step-level environment variables (overrides job/workflow level)
 
+# if: ${{ inputs.debug }}  # conditional execution expression
 # shell: bash  # Overrides the default shell to use bash on Windows
 # uses: Calls a pre-built GitHub Action (here, to checkout repo code)
 # with: Supplies input parameters to the action above (uses keyword)
