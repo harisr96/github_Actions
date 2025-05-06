@@ -50,7 +50,7 @@ jobs:
     steps:
      - name: print Env variables
        run: | 
-         echo "Workflow env: $"MY_WORKFLOW_VAR"
-         echo "Overwritten env: $"MY_OVERWRITTEN_VAR"
+         echo "Workflow env: $MY_WORKFLOW_VAR"
+         echo "Overwritten env: $MY_OVERWRITTEN_VAR"
 
  
