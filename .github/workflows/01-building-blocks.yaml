@@ -1,6 +1,6 @@
-name: 01-Building-Blocks
+name: 01-Building-Blocks    
 
-on: workflow_dispatch
+on: workflow_dispatch       
 
 jobs:
       
@@ -21,3 +21,44 @@ jobs:
               run: echo "good bye!"
 
 
+
+# name: Defines the name of the workflow
+# on: Specifies the event that triggers the workflow
+# jobs: Defines a collection of jobs to be run
+# Job ID (custom name for the job)
+# runs-on: Specifies the type of runner (e.g., ubuntu, windows)
+# defaults: Sets default values for all steps in the job (cd directory)
+# steps: A sequence of tasks to be run as part of the job
+# name: Human-readable name for the step
+# run: Executes shell commands
+
+ # Another job
+
+
+
+
+# events are triggers
+# runners are VMs
+
+# run-name: keyword is used to dynamically name a workflow run
+# workflow_dispatch:  # Allows manual triggering from the GitHub UI
+# types: Filters specific activity types within the pull_request event
+# branches: Limits the trigger to specific branches
+# inputs: Defines inputs for manually triggered workflows
+# debug: Name of the input
+# type: Declares the input type (boolean, string, etc.)
+# default: Specifies a default value if input is not provided
+
+# env: Declares environment variables at the workflow level (available to all jobs/steps)
+# env: Declares environment variables at the job level (available to all steps in the job)
+# env: Step-level environment variables (overrides job/workflow level)
+
+# shell: bash  # Overrides the default shell to use bash on Windows
+# uses: Calls a pre-built GitHub Action (here, to checkout repo code)
+# with: Supplies input parameters to the action above (uses keyword)
+ 
+##contexts
+# ${{ github.event_name}}
+# ${{ env.MY_OVERWRITTEN_VAR}}
+# ${{ vars.MY_VAR}}
+# $MY_OVERWRITTEN_VAR
