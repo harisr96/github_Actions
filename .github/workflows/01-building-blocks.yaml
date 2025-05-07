@@ -27,6 +27,8 @@ jobs:
 # jobs: Defines a collection of jobs to be run
 # Job ID (custom name for the job)
 # runs-on: Specifies the type of runner (e.g., ubuntu, windows)
+# needs: job dependencies
+# continue-on-error: true even if the job fails will exit with success and downstream can continue
 # environment:prod when the environment is prod
 # defaults: Sets default values for all steps in the job (cd directory)
 # steps: A sequence of tasks to be run as part of the job
@@ -43,12 +45,16 @@ jobs:
 
 # run-name: keyword is used to dynamically name a workflow run
 # workflow_dispatch:  # Allows manual triggering from the GitHub UI
+# workflow_call: Allows one workflow to call another workflow (reusable workflow)
 # types: Filters specific activity types within the pull_request event
 # branches: Limits the trigger to specific branches
 # inputs: Defines inputs for manually triggered workflows
-# debug: Name of the input
-# type: Declares the input type (boolean, string, etc.)
-# default: Specifies a default value if input is not provided
+# input type: boolean,environment,choice
+# pick an environment defined in your GitHub repository
+# boolean UI shows a checkbox.
+# Presents a list of predefined options in a dropdown
+
+ 
 
 # env: Declares environment variables at the workflow level (available to all jobs/steps)
 # env: Declares environment variables at the job level (available to all steps in the job)
